@@ -5,6 +5,14 @@
 # Viade - Decentralized Routes
 ### Currenty this project is ***WIP***.
 
+## Documentation
+
+Technical documentation is available on [Docs](https://arquisoft.github.io/viade_es5a/docs).
+
+## Deployment
+
+Application is automatically deployment using [Github delivering deployment](https://arquisoft.github.io/viade_es5a/).
+
 This project is an assignment for the [Software Architecture course](https://arquisoft.github.io/) following [these requirements](https://labra.solid.community/public/SoftwareArchitecture/AssignmentDescription/).
 
 ## Getting Started
@@ -53,10 +61,6 @@ If you would like to run tests locally, run the following after installing depen
 npm run test
 ```
 
-## Documentation
-
-Technical documentation is available on [Docs](https://arquisoft.github.io/viade_es5a/docs)
-
 ### Building documentation
 
 If you would like to build docuemntation locally, run the following:
@@ -91,7 +95,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Javier Martínez Álvarez** - [jaluma](https://github.com/jaluma)
-* **Christian Días González** - [uo258427](https://github.com/uo258427)
 * **María Isabel Fernández Pérez** - [isafdezpe](https://github.com/isafdezpe)
 * **Luis Carlos Hurlé Fleitas** - [luishurle94](https://github.com/luishurle94)
 * **Adrián Vaz Sánchez** - [Adri-San](https://github.com/Adri-San)
@@ -106,7 +109,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Skelenton built using [Solid React Application Generator](https://github.com/inrupt/generator-solid-react).
 
-## To Do
+## Task list
 - [x] Documentation based on Arc42.
   - [x] Initial version.
   - [x] Final version.
