@@ -18,19 +18,17 @@ The information exchange will be done by typing in the POD of the user logged in
 
 === Business Context
 
-The different stakeholders in the software product we are dealing with are the following: 
+The different users in the software product we are dealing with are the following: 
 
 * *Anonymous user*
 * *Logged user*
+* *Friend user*
+
+In addition, we have the following services involved in the system:
+
 * *POD*
 * *POD Server*: Composite of PODs
 * *Google Maps*
-
-The next stakeholders are candidates to be considered in the future:
-
-* *Friend user*
-* *Teacher*
-* *Inrupt Workers*
 
 image::03-context.png[Business context diagram]
 
@@ -38,8 +36,9 @@ image::03-context.png[Business context diagram]
 |===
 | Communication Partner             | Input									| Output
 | Anonymous User					| Text              	                | Access to POD
-| Logged User						| Route              	                | Route, Milestones, Comments, Images, Videos
+| Logged User						| Route              	                | Route, Milestones, Comments, Media
 | POD								| Data models, images, videos, text		| RDF
+| POD Server						| Text, SPARQL                          | Text, RDF
 | Google Maps						| GeoJSON		                        | Javascript
 |===
 
@@ -52,17 +51,27 @@ The processing of the files must be done using RDF, a system that SOLID is compa
 
 Solid's POD server will allow us to store the information in our POD, and access the information in the PODs where the user has permissions. 
 
+For the representation of the routes, Google Maps API will be used. It corresponds to the most advanced and used map-related service.
+
+On the other hand, all communication in the application should be through HTTPS using TLS. It is necessary that all TLS requirements that this implies are met, as well as having a valid certificate.
+
 [%header,cols=2*] 
 |===
 |Technical interfaces
-|Stakeholder
+|Implied entities
 
 |Viade
-|Anonymous User, Logged User, Google Maps API
+|Anonymous User, Logged User
 
 |POD
-|Logged user, friends user
+|Logged user, Friends user
 
 |POD Server
-|POD, Logged user, friends user
+|POD, Logged user, Friends user
+
+|Google Maps
+|Logged user, Friend user
+
+|HTTPS
+|Anonymous User, Logged user, Friend user, POD Server
 |===

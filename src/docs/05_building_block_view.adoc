@@ -12,7 +12,11 @@ The motivation of this diagram is to have a general vision of all different modu
 === Level 1
 
 ==== White Box Viade
+
+At a first glance, we can identify the main modules that make up the application. We have the Viade Client modules developed in this project and SolidServer with whom it interacts.
+
 image::Diagrams-5.2.1.svg[Viade First Level]
+
 Contained Building Blocks::
 [cols="1,3" options="header"]
 |===
@@ -26,10 +30,13 @@ Client-Server high level communication (HTTP).
 
 === Level 2
 
-
 ==== White Box Viade Client
+
+If we break down ViadeClient, we get three modules.They make use of an n-layer based architecture, namely three.
+
 image::Diagrams-5.3.1.svg[Viade Client: Second Level]
 Contained Building Blocks::
+
 [cols="1,3" options="header"]
 |===
 | **Name** | **Responsibility**
@@ -39,7 +46,11 @@ Contained Building Blocks::
 |===
 
 ==== White Box Solid Server
+
+External module to the project. For more indepth information relative to this blocks, click link:https://rubenverborgh.github.io/solid-server-architecture/solid-architecture-v1-2-0.pdf[here].
+
 image::Diagrams-5.3.2.svg[Solid Server: Second Level]
+
 Contained Building Blocks::
  * Authentication
  * Authorization
@@ -47,11 +58,14 @@ Contained Building Blocks::
  * LDP
  * Storage
 
-For more indepth information relative to this blocks, click link:https://rubenverborgh.github.io/solid-server-architecture/solid-architecture-v1-2-0.pdf[here].
-
 === Level 3
 ==== White Box Route Module
+
+In this module you will find all the components that are related to the UI layer.
+
 image::Diagrams-5.4.1.svg[Route Module: Third Level]
+
+Contained Building Blocks::
 [cols="1,3" options="header"]
 |===
 | **Name** | **Responsibility**
@@ -66,7 +80,12 @@ image::Diagrams-5.4.1.svg[Route Module: Third Level]
 |===
 
 ==== White Box Data Service Module
+
+The decomposition of DataService is complex. On the one hand, we have the services in relation to Solid User, Friend Service and NotificationService. On the other hand, we have the services for route management.
+
 image::Diagrams-5.4.2.svg[Data Service Module: Third Level]
+
+Contained Building Blocks::
 [cols="1,3" options="header"]
 |===
 | **Name** | **Responsibility**
@@ -79,7 +98,12 @@ image::Diagrams-5.4.2.svg[Data Service Module: Third Level]
 |===
 
 ==== White Box Solid Adapter Module
+
+Finally, the lowest level module is SolidAdapter. It provides us with the logic for the necessary interaction with RDF. It looks similar to an ORM (Object Relational Object). 
+
 image::Diagrams-5.4.3.svg[Solid Adapter Module: Third Level]
+
+Contained Building Blocks::
 [cols="1,3" options="header"]
 |===
 | **Name** | **Responsibility**
